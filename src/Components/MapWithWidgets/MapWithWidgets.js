@@ -16,13 +16,27 @@ class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            dataSet: props.locations,
+            locations: [],
+            dataSet: [],
             widgetsIsOpen: false,
             activeDays: this.getActiveDays(moment(), 'week'),
             currentDate: moment(),
             detalisation: 'week'
         }
         this.widgetsClick = this.widgetsClick.bind(this);
+    }
+
+    componentDidMount() {
+        d3.csv('data/new_path1.csv', (err, data) => {
+            if (err) {
+                console.log(err)
+                return
+            }
+            this.setState({
+                locations: data,
+                dataSet: data
+            })
+        })
     }
 
     getActiveDays(currentDate, detalisation){
@@ -45,7 +59,7 @@ class App extends Component {
         this.setState({
             currentDate: newDate,
             activeDays: activeDays,
-            dataSet: this.props.locations.filter(function (location) {
+            dataSet: this.state.locations.filter(function (location) {
                 return (new Date(location.date) >= activeDays[0]) &&
                     (new Date(location.date) < moment(activeDays[activeDays.length - 1]).add(1, 'days'))
             })
@@ -87,7 +101,7 @@ class App extends Component {
         this.setState({
             detalisation: newDetalisation,
             activeDays: activeDays,
-            dataSet: this.props.locations.filter(function (location) {
+            dataSet: this.state.locations.filter(function (location) {
                 return (new Date(location.date) >= activeDays[0]) &&
                     (new Date(location.date) < moment(activeDays[activeDays.length - 1]).add(1, 'days'))
             })
@@ -121,7 +135,7 @@ class App extends Component {
     unsetFilters(){
         let activeDays = this.state.activeDays;
         this.setState({
-            dataSet: this.props.locations.filter(function (location) {
+            dataSet: this.state.locations.filter(function (location) {
                 return (new Date(location.date) >= activeDays[0]) &&
                     (new Date(location.date) < moment(activeDays[activeDays.length - 1]).add(1, 'days'))
             })
