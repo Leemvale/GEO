@@ -13,12 +13,36 @@
     "react-dom": "^16.2.0",
     "react-leaflet": "^1.9.1",
     "react-leaflet-markercluster": "^1.1.8",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "stylelint-config-airbnb": "0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint . --ext .js",
+    "stylelint": "stylelint '**/*.{css,scss}'"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "stylelint": "^13.7.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.(css|scss)": "stylelint --fix"
   }
 }
