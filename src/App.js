@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
         <div>
-            <MapWithWidgets locations = {this.state.locations}/>
+            {this.state.locations.length > 0 && <MapWithWidgets locations = {this.state.locations}/> }
         </div>
     );
   }
