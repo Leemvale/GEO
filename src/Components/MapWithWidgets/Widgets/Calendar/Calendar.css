@@ -1,0 +1,11 @@
+#calendar {
+    height: 100px;
+}
+
+#calendar .react-datepicker__day--highlighted {
+    background-color: #f1c3ac;
+}
+
+#calendar .react-datepicker__day--selected{
+    background-color: #ff9ea2;
+}

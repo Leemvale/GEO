@@ -1,0 +1,49 @@
+#widgetsWithDitail{
+    position: absolute;
+    bottom: 5%;
+    z-index: 1000;
+    width: 100%;
+}
+.ditalBtn{
+    background-color: #9804e7;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ditalBtn:hover{
+    background-color: #ce52ff;
+}
+
+.ditalBtns {
+    display: block;
+    text-align: center;
+}
+
+#onMapWgtsBtn{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 1000;
+    padding: 30px 15px;
+    background-color: crimson;
+    color: white;
+    border-radius: 70px;
+    font-size: 24px;
+}
+#onMapWgtsBtn:hover{
+    background-color: #ce52ff;
+}
+
+button:focus{
+    outline: none;
+}
+
+.invisible{
+    display: none;
+}
+.attention{
+    background-color: #e7234c;
+}

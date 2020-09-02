@@ -1,0 +1,16 @@
+#type-distance-widget{
+    padding: 10px;
+}
+#type-distance-widget svg{
+    width: 210px;
+    height: 210px;
+}
+
+#type-distance-widget text{
+    font-size: 12px;
+    fill: white;
+}
+
+.arc:hover{
+    fill: #f9d7ff;
+}

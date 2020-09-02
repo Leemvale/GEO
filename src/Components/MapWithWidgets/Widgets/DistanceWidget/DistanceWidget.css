@@ -1,0 +1,38 @@
+.v-bar {
+    min-height: 15px;
+    background-color: #ff82b0;
+    font-size: 11px;
+    color: #f0f8ff;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    margin: 0 2px;
+}
+
+.v-bar:hover{
+    background-color: #f3d8dd;
+    color:#ce52ff;
+}
+
+.my-heading{
+    text-align: center;
+    font-family: 'Vast Shadow', cursive;
+    margin: 0;
+    padding: 5px;
+}
+.distance-widget{
+    min-width: 300px;
+    padding: 10px;
+}
+
+.date{
+    text-align: center;
+}
+
+#distance-bar{
+    position: relative;
+    display: block;
+    height: 150px;
+    overflow: hidden;
+
+}

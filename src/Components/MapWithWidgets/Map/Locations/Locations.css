@@ -1,0 +1,9 @@
+#root .location{
+    fill: #be174e;
+    stroke: #ff8177;
+    opacity: 1;
+}
+
+#root .stop{
+    fill-opacity: .7;
+}
