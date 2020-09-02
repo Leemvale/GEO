@@ -7,13 +7,14 @@
     "leaflet": "^1.3.1",
     "leaflet.markercluster": "^1.3.0",
     "moment": "^2.21.0",
-    "prop-types": "^15.6.1",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
     "react": "^16.2.0",
     "react-datepicker": "^1.3.0",
     "react-dom": "^16.2.0",
     "react-leaflet": "^1.9.1",
     "react-leaflet-markercluster": "^1.1.8",
-    "react-scripts": "1.1.1",
+    "react-scripts": "^3.4.3",
     "stylelint-config-airbnb": "0.0.0"
   },
   "scripts": {
@@ -25,7 +26,7 @@
     "stylelint": "stylelint '**/*.{css,scss}'"
   },
   "devDependencies": {
-    "eslint": "^7.8.1",
+    "babel-eslint": "^10.1.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.0",
@@ -34,7 +35,10 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
-    "stylelint": "^13.7.0"
+    "stylelint": "^13.7.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
   },
   "husky": {
     "hooks": {
@@ -44,5 +48,17 @@
   "lint-staged": {
     "*.js": "eslint --fix",
     "*.(css|scss)": "stylelint --fix"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

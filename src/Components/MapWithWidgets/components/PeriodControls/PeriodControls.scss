@@ -1,0 +1,20 @@
+@import 'src/assets/styles/colors.scss';
+
+.period-controls {
+  display: block;
+  text-align: center;
+
+  &__btn {
+    background-color: $primary;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: $primary-dark;
+      cursor: pointer;
+    }
+  }
+}
