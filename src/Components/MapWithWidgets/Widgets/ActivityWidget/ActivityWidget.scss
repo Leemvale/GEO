@@ -1,0 +1,10 @@
+.activity-widget{
+  width: 480px;
+  padding: 10px;
+
+  &__diagram {
+    svg {
+      height: 200px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.heatmap {
+  padding-left: 70px;
+}
+
+#heatmap-svg {
+  width: 100%;
+}
+
+.heatmap-container {
+  display: flex;
+}
+
+%labels {
+  font-size: 10px;
+}
+
+.x-labels {
+  @extend %labels;
+  display: flex;
+  justify-content: space-around;
+}
+
+.y-labels {
+  @extend %labels;
+  width: 70px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  margin-left: -70px;
+}
